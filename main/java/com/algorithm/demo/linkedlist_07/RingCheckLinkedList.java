@@ -5,21 +5,21 @@ package com.algorithm.demo.linkedlist_07;
  *
  * 并检测环的开始节点位置
  */
-public class RingCheckLinkedLisk<T> {
+public class RingCheckLinkedList<T> {
 
     private int size;
     private LNode headNode;
 
-    public RingCheckLinkedLisk(){
+    public RingCheckLinkedList(){
         this.size = 0;
         this.headNode = new LNode();
     }
 
-    public RingCheckLinkedLisk(LNode node){
+    public RingCheckLinkedList(LNode node){
         this.headNode = new LNode(null,node);
     }
 
-    public RingCheckLinkedLisk(T[] datas){
+    public RingCheckLinkedList(T[] datas){
         this.size=0;
         this.headNode = new LNode();
 
@@ -72,7 +72,7 @@ public class RingCheckLinkedLisk<T> {
 
     public static void main(String[] args) {
         Integer[] arr = {1,2,3,4,5,6,7,8};
-        RingCheckLinkedLisk ringCheckLinkedLisk = new RingCheckLinkedLisk<Integer>(arr);
+        RingCheckLinkedList ringCheckLinkedLisk = new RingCheckLinkedList<Integer>(arr);
         System.out.println(ringCheckLinkedLisk.ringCheck());
 
         LNode n1 = new LNode(1);
@@ -86,7 +86,7 @@ public class RingCheckLinkedLisk<T> {
         LNode n9 = new LNode(9,n8);
 
         n1.setNext(n5);
-        RingCheckLinkedLisk ringCheckLinkedLisk2 = new RingCheckLinkedLisk<Integer>(n9);
+        RingCheckLinkedList ringCheckLinkedLisk2 = new RingCheckLinkedList<Integer>(n9);
         System.out.println(ringCheckLinkedLisk2.ringCheck());
         System.out.println(ringCheckLinkedLisk2.ringCheckIndex());
     }
