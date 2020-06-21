@@ -34,6 +34,10 @@ public class RingCheckLinkedLisk<T> {
         }
     }
 
+    /**
+     * 是否有环
+     * @return
+     */
     public boolean ringCheck(){
         LNode p = headNode;
         LNode q = headNode;
@@ -41,12 +45,16 @@ public class RingCheckLinkedLisk<T> {
             p = p.getNext();
             q = q.getNext().getNext();
             if(p == q){
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
+    /**
+     * 环的起始节点
+     * @return
+     */
     public Integer ringCheckIndex(){
         LNode p = headNode;
         LNode q = headNode;
