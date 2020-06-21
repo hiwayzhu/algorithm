@@ -1,6 +1,4 @@
-package com.algorithm.demo;
-
-import org.springframework.util.StringUtils;
+package com.algorithm.demo.linkedlist_06;
 
 /**
  * 单链表判断回文串

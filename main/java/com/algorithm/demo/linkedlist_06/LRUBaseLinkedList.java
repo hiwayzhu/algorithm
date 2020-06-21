@@ -1,4 +1,4 @@
-package com.algorithm.demo;
+package com.algorithm.demo.linkedlist_06;
 
 import java.util.Scanner;
 
