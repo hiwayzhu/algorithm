@@ -60,7 +60,7 @@ public class DynamicArrayQueue {
         return item;
     }
 
-    public void printlAll(){
+    public void printAll(){
         System.out.print("队列包含");
         for(String v:arr){
             System.out.print(" -> "+v);
@@ -76,6 +76,6 @@ public class DynamicArrayQueue {
         queue.enqueue("e");
         queue.dequeue();
         queue.enqueue("f");
-        queue.printlAll();
+        queue.printAll();
     }
 }

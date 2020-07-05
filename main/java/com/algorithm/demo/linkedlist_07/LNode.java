@@ -32,4 +32,4 @@ public class LNode<T>{
         public void setNext(LNode next) {
             this.next = next;
         }
-    }
+}
