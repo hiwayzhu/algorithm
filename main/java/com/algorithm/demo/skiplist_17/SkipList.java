@@ -39,6 +39,19 @@ public class SkipList {
         return level;
     }
 
+    public void delete(int value) {
+        Node p = head;
+        for (int i = level - 1; i >= 0; --i) {
+            while (p.next[i] != null && p.next[i].value < value) {
+                p = p.next[i];
+            }
+            if(p.next[i]!=null&& p.next[i].value == value){
+                Node tmp = p.next[i];
+                p.next[i] =p.next[i].next[i];
+                tmp.next[i] =null;
+            }
+        }
+    }
 
     class Node{
         int value = -1;
@@ -111,6 +124,8 @@ public class SkipList {
         list.printAll_beautiful();
         list.find(7);
         list.find(10);
+        list.delete(7);
+        list.find(7);
     }
 
 }
